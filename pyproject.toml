@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "rss_bot"
+version = "0.1.0"
+description = "Telegram rss bot"
+authors = ["@antoncarrot"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+aiogram = "^2.20"
+uvloop = "^0.16.0"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.10.1"
+black = "^22.3.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
