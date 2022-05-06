@@ -17,5 +17,13 @@ env/
 # System
 .DS_Store
 
+# GIT
+.git/
+.gitignore
+
 # Project files
 .env
+.dockerignore
+README.md
+Dockerfile
+docker-compose.yml
