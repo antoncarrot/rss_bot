@@ -23,6 +23,7 @@ env/
 
 # Project files
 .env
+.env.tmpl
 .dockerignore
 README.md
 Dockerfile
