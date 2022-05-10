@@ -1,4 +1,4 @@
-# Telegram rss bot
+# RSS feeds aggregator telegram bot
 
 ### Run
 

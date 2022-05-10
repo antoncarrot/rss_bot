@@ -1,13 +1,15 @@
 [tool.poetry]
 name = "rss_bot"
 version = "0.1.0"
-description = "Telegram rss bot"
+description = "RSS feeds aggregator telegram bot"
 authors = ["@antoncarrot"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
 aiogram = "^2.20"
 uvloop = "^0.16.0"
+motor = "^3.0.0"
+aioredis = "^2.0.1"
 
 [tool.poetry.dev-dependencies]
 isort = "^5.10.1"

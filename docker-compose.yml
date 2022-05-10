@@ -1,0 +1,38 @@
+services:
+  db:
+    image: mongo:5.0.8
+    hostname: db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USER:-app}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASS:-app}
+    volumes:
+      - db:/data/db
+    ports:
+      - "127.0.0.1:27017:27017"
+
+  redis:
+    image: redis:6.2.7-alpine
+    hostname: redis
+    volumes:
+      - redis:/data
+    ports:
+      - "127.0.0.1:6379:6379"
+
+  app:
+    build:
+      context: "."
+    depends_on:
+      - db
+      - redis
+    environment:
+      TG_API_TOKEN: ${TG_API_TOKEN}
+      DB_USER: ${DB_USER:-app}
+      DB_PASS: ${DB_PASS:-app}
+      DB_HOST: ${DB_HOST:-db}
+      DB_PORT: ${DB_PORT:-27017}
+      REDIS_HOST: ${REDIS_HOST:-redis}
+      REDIS_PORT: ${REDIS_PORT:-6379}
+
+volumes:
+  db:
+  redis:
