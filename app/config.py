@@ -5,6 +5,9 @@ TG_API_TOKEN = os.getenv("TG_API_TOKEN")
 DB_URI = os.getenv("DB_URI", "mongodb://app:app@127.0.0.1:27017")
 DB_NAME = os.getenv("DB_NAME", "app")
 
+REDIS_HOST = os.getenv("REDIS_HOST")
+REDIS_PORT = os.getenv("REDIS_PORT", 6379)
+
 DEBUG = True if os.getenv("DEBUG") else False
 
 LOG_FORMAT = "%(asctime)s %(levelname)s %(name)s.%(funcName)s:%(lineno)s %(message)s"
