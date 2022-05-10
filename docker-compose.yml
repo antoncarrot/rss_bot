@@ -26,7 +26,10 @@ services:
       - redis
     environment:
       TG_API_TOKEN: ${TG_API_TOKEN}
-      DB_URI: ${DB_URI:-mongodb://app:app@db:27017}
+      DB_USER: ${DB_USER:-app}
+      DB_PASS: ${DB_PASS:-app}
+      DB_HOST: ${DB_HOST:-db}
+      DB_PORT: ${DB_PORT:-27017}
       REDIS_HOST: ${REDIS_HOST:-redis}
       REDIS_PORT: ${REDIS_PORT:-6379}
 

@@ -2,7 +2,10 @@ import os
 
 TG_API_TOKEN = os.getenv("TG_API_TOKEN")
 
-DB_URI = os.getenv("DB_URI", "mongodb://app:app@127.0.0.1:27017")
+DB_USER = os.getenv("DB_USER", "app")
+DB_PASS = os.getenv("DB_PASS", "app")
+DB_HOST = os.getenv("DB_HOST", "127.0.0.1")
+DB_PORT = os.getenv("DB_PORT", 27017)
 DB_NAME = os.getenv("DB_NAME", "app")
 
 REDIS_HOST = os.getenv("REDIS_HOST")
