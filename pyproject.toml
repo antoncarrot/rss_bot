@@ -5,22 +5,20 @@ description = "RSS feeds aggregator telegram bot"
 authors = ["@antoncarrot"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
-aiogram = "^2.20"
-uvloop = "^0.16.0"
-motor = "^3.0.0"
-aioredis = "^2.0.1"
-feedparser = "^6.0.10"
+python = "^3.11"
+aiogram = "^3.1.1"
+uvloop = "^0.19.0"
+httpx = "^0.25.1"
+python-dotenv = "^1.0.0"
 
-[tool.poetry.dev-dependencies]
-isort = "^5.10.1"
-black = "^22.3.0"
+[tool.poetry.group.dev.dependencies]
+isort = "^5.12.0"
+black = "^23.10.1"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.black]
-line-length = 120
-target-version = ['py39']
-extend-exclude = '/venv/'
+line-length = 119
+target-version = ['py311']
