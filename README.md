@@ -1,4 +1,4 @@
-# RSS feeds aggregator telegram bot
+# RSS feeds aggregator bot for telegram
 
 ### Requirements
 
@@ -13,4 +13,6 @@ poetry export --without-hashes > requirements.txt
 
 ### Exec
 
-`python -m app`
+`python -m bot`
+
+`docker compose up --build`
