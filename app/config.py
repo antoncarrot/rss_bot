@@ -1,17 +1,18 @@
 import os
 
-TG_API_TOKEN = os.getenv("TG_API_TOKEN")
+TG_BOT_TOKEN = os.getenv("TG_BOT_TOKEN")
+TG_BOT_ADMIN_ID = os.getenv("TG_BOT_ADMIN_ID")
+TG_BOT_PRIVATE_MODE = os.getenv("TG_BOT_PRIVATE_MODE", True)
 
-DB_USER = os.getenv("DB_USER", "app")
-DB_PASS = os.getenv("DB_PASS", "app")
-DB_HOST = os.getenv("DB_HOST", "127.0.0.1")
-DB_PORT = os.getenv("DB_PORT", 27017)
-DB_NAME = os.getenv("DB_NAME", "app")
+MINIFLUX_API_URL = os.getenv("MINIFLUX_API_URL")
+MINIFLUX_USER = os.getenv("MINIFLUX_USER")
+MINIFLUX_PSWD = os.getenv("MINIFLUX_PSWD")
+MINIFLUX_API_TOKEN = os.getenv("MINIFLUX_API_TOKEN")
 
-REDIS_HOST = os.getenv("REDIS_HOST")
-REDIS_PORT = os.getenv("REDIS_PORT", 6379)
+if (not MINIFLUX_USER and not MINIFLUX_PSWD) or not MINIFLUX_API_TOKEN:
+    raise ValueError("Miniflux user/password or api token not set")
 
-DEBUG = True if os.getenv("DEBUG") else False
+DEBUG = os.getenv("APP_DEBUG", False)
 
 LOG_FORMAT = "%(asctime)s %(levelname)s %(name)s.%(funcName)s:%(lineno)s %(message)s"
 
