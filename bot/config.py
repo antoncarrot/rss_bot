@@ -12,6 +12,7 @@ MINIFLUX_API_URL = os.getenv("MINIFLUX_API_URL")
 MINIFLUX_USER = os.getenv("MINIFLUX_USER")
 MINIFLUX_PSWD = os.getenv("MINIFLUX_PSWD")
 MINIFLUX_API_TOKEN = os.getenv("MINIFLUX_API_TOKEN")
+MINIFLUX_API_POLLING_FREQUENCY = os.getenv("MINIFLUX_API_POLLING_FREQUENCY", 10)  # in minutes
 
 if (not MINIFLUX_USER and not MINIFLUX_PSWD) and not MINIFLUX_API_TOKEN:
     raise ValueError("Miniflux user/password or api token not set")
