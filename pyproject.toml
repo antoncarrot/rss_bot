@@ -1,7 +1,7 @@
 [tool.poetry]
 name = "rss_bot"
 version = "0.1.0"
-description = "RSS feeds aggregator telegram bot"
+description = "RSS feeds aggregator bot for telegram"
 authors = ["@antoncarrot"]
 
 [tool.poetry.dependencies]
